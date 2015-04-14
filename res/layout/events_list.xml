@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="289dp"
+        android:layout_weight="0.24"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" />
+    
+     <Button
+         android:id="@+id/getButton"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Get Events" />
+
+      <Button
+         android:id="@+id/inflateButton"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Inflate Events" />
+</LinearLayout>

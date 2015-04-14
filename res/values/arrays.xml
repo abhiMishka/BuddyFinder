@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="feedbacktypelist">
+		<item>@string/Movie</item>
+		<item>@string/Coffee</item>
+		<item>@string/Outstation</item>
+		<item>@string/Others</item>
+	</string-array>
+
+</resources>

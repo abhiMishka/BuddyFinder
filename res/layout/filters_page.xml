@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="50dp" >
+
+     <CheckBox
+         android:id="@+id/otherCheckbox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/filterButton"
+         android:layout_alignLeft="@+id/outstationCheckbox"
+         android:layout_marginBottom="17dp"
+         android:text="@string/Others" />
+
+     <CheckBox
+         android:id="@+id/coffeCheckbox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/outstationCheckbox"
+         android:layout_centerHorizontal="true"
+         android:text="@string/Coffee" />
+
+     <CheckBox
+         android:id="@+id/moviesCheckbox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/coffeCheckbox"
+         android:layout_alignLeft="@+id/coffeCheckbox"
+         android:text="@string/Movie" />
+
+     <CheckBox
+         android:id="@+id/outstationCheckbox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/otherCheckbox"
+         android:layout_alignLeft="@+id/coffeCheckbox"
+         android:text="@string/Outstation" />
+
+     <Button
+         android:id="@+id/filterButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:text="Done" />
+ 
+</RelativeLayout>

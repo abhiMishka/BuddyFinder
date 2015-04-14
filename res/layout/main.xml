@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+    
+
+    
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="@string/login"
+        android:textColor="#fff"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_login"
+        />
+    
+    <Button
+        android:id="@+id/linkedinloginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:textColor="#fff"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/linkedin_signin_image"
+        />
+    
+     <Button
+         android:id="@+id/sendButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="50dp"
+         android:text="Send Data"
+         android:textColor="#fff"
+         android:textStyle="bold" />
+     
+      <Button
+         android:id="@+id/sendLinkedInButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="50dp"
+         android:text="Send Linkedin Data"
+         android:textColor="#fff"
+         android:textStyle="bold" />
+      
+        <Button
+         android:id="@+id/numberVerficationButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="20dp"
+         android:text="Verify Number"
+         android:textColor="#fff"
+         android:textStyle="bold" />
+    
+</LinearLayout>
