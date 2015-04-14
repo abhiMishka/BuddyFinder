@@ -100,7 +100,7 @@ public final class R {
 		public static final int com_facebook_list_section_header_background = 0x7f020072;
 		public static final int com_facebook_loginbutton_silver = 0x7f020073;
 		public static final int com_facebook_logo = 0x7f020074;
-		public static final int com_facebook_picker_default_separator_color = 0x7f0200ba;
+		public static final int com_facebook_picker_default_separator_color = 0x7f0200bb;
 		public static final int com_facebook_picker_item_background = 0x7f020075;
 		public static final int com_facebook_picker_list_focused = 0x7f020076;
 		public static final int com_facebook_picker_list_longpressed = 0x7f020077;

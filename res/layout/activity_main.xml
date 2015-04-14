@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
@@ -8,24 +8,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android.buddyfinder.MainActivity" >
+    tools:context="com.android.buddyfinder.MainActivity" 
+    android:background="@drawable/splash_screen">
 
-    <Button
-        android:id="@+id/CheckUserProfileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Load User Profile" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&lt;load user profile response>" />
-    
      <Button
-        android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign In" />
+         android:id="@+id/signUp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginRight="65dp"
+         android:layout_marginTop="22dp"
+         android:text="Sign In" />
 
-</LinearLayout>
+     <Button
+         android:id="@+id/CheckUserProfileButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignRight="@+id/textView"
+         android:layout_marginBottom="123dp"
+         android:text="Load User Profile" />
+
+     <TextView
+         android:id="@+id/textView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/signUp"
+         android:layout_alignTop="@+id/CheckUserProfileButton"
+         android:layout_marginTop="60dp"
+         android:text="&lt;load user profile response>" />
+
+</RelativeLayout>
