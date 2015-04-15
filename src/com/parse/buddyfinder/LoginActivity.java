@@ -197,7 +197,8 @@ public class LoginActivity extends Activity {
 							myUser.setFirstName(user.getFirstName());
 							myUser.setLastName(user.getLastName());
 							ParseUser.getCurrentUser().put("name", user.getName());
-							if (user.getLocation().getProperty("name") != null) {
+							//if (user.getLocation().getProperty("name") != null)
+							{
 								/*
 								myUser.se.put("location", (String) user
 										.getLocation().getProperty("name"));
@@ -205,21 +206,24 @@ public class LoginActivity extends Activity {
 										.getLocation().getProperty("name"));
 							*/
 							}
-							if (user.getProperty("gender") != null) {
+							//if (user.getProperty("gender") != null) 
+							{
 								/*
 								userProfile.put("gender",
 										(String) user.getProperty("gender"));
 										*/
 							
 							}
-							if (user.getBirthday() != null) {								
+							//if (user.getBirthday() != null)
+							{								
 								myUser.setDateOfBirth(user.getBirthday());
 							}
 							
 							myUser.setPhoneNumber("8447035110");
 							myUser.setMemberOfEvents(new ArrayList<String>());
 							
-							makeServerUserRequest();
+						//	makeServerUserRequest();
+							showAfterLoginPageActivity();
 
 						} else if (response.getError() != null) {
 							if ((response.getError().getCategory() == FacebookRequestError.Category.AUTHENTICATION_RETRY)
@@ -246,7 +250,7 @@ public class LoginActivity extends Activity {
 			public void run() {
 				userService.addUser(myUser);
 				myUser=userService.findById(myUser.getId());
-				showHomePageActivity();
+				showAfterLoginPageActivity();
 				LoginActivity.this.progressDialog.dismiss();
 			}
 		}).start();
@@ -265,12 +269,13 @@ public class LoginActivity extends Activity {
 	}
 	
 	
-	private void showHomePageActivity() {
-		
-		
-		
-		
+	private void showHomePageActivity() {		
 		Intent intent = new Intent(this, HomePageActivity.class);
+		startActivity(intent);
+	}
+	
+	private void showAfterLoginPageActivity() {		
+		Intent intent = new Intent(this, AfterLoginPage.class);
 		startActivity(intent);
 	}
 	

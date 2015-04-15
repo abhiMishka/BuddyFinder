@@ -1,29 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="22dp"
-        android:orientation="vertical" >
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_marginBottom="5dp"
-            android:background="#000000" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="0.68"
-            android:text="It will take some time for verification.\nPlease wait.." />
-    </LinearLayout>
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_clear" >
 
     <RelativeLayout
         android:id="@+id/timer_rl"
@@ -48,59 +27,68 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/verifybutton"
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ph_et"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:padding="20dp"
-        android:text="@string/verify"
-        />
-    
-      <EditText
-        android:id="@+id/country_code_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_phno_tv"
-        android:layout_centerHorizontal="true"
-        android:layout_toLeftOf="@+id/ph_et"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/edit_drawable"
-        android:ems="10"
-        android:inputType="phone"
-        android:padding="5dp" >
-
-       
-    </EditText>
-
-    <EditText
-        android:id="@+id/ph_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_phno_tv"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/edit_drawable"
-        android:ems="10"
-        android:inputType="phone"
-        android:padding="5dp" >
-
-        <requestFocus />
-    </EditText>
-
     <TextView
         android:id="@+id/enter_phno_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ph_et"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        android:text="Enter phone number for verification" />
+        android:layout_marginTop="90dp"
+        android:paddingLeft="90dp"
+        android:text="Verify your number !"
+        android:textColor="@color/yellow"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/country_code_tv"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/enter_phno_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="34dp"
+        android:background="@color/blue"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/yellow"
+        android:padding="5dp"
+        android:text="+91" />
+
+    <EditText
+        android:id="@+id/ph_et"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/country_code_tv"
+        android:layout_alignBottom="@+id/country_code_tv"
+        android:layout_toRightOf="@+id/country_code_tv"
+        android:background="@color/blue"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/yellow"
+        android:padding="5dp"
+        android:text="8447035110" >
+
+        <requestFocus />
+    </EditText>
+
+ <LinearLayout
+     android:id="@+id/verifyNumberLinerarLayout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignLeft="@+id/country_code_tv"
+     android:layout_below="@+id/country_code_tv"
+     android:layout_marginTop="39dp"
+     android:orientation="horizontal" >
+
+     <TextView
+         android:id="@+id/verifyNumberTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Check Now"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textColor="@color/red"
+         android:textSize="30dp"
+         android:textStyle="bold" />
+ </LinearLayout>
 
 </RelativeLayout>

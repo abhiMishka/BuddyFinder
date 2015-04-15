@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splash_screen_clear" >
+
+   <com.facebook.widget.ProfilePictureView
+        android:id="@+id/userProfilePicture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="28dp"
+        android:rotation="-20"
+        android:background="@drawable/customborder" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userProfilePicture"
+        android:layout_alignLeft="@+id/userProfilePicture"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:text="Johny Gaddar"
+        android:textColor="@color/yellow"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:paddingRight="20dp"
+        android:text="Welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/yellow"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userProfilePicture"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="66dp"
+        android:layout_marginLeft="19dp"
+        android:rotation="-5"
+        android:id="@+id/verifyNumberLinerarLayout" >
+
+        <TextView
+            android:id="@+id/verifyNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify You Number"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+    </LinearLayout>
+>
+
+</RelativeLayout>

@@ -21,22 +21,25 @@
          android:layout_marginTop="22dp"
          android:text="Sign In" />
 
-     <Button
-         android:id="@+id/CheckUserProfileButton"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:layout_alignRight="@+id/textView"
-         android:layout_marginBottom="123dp"
-         android:text="Load User Profile" />
-
      <TextView
          android:id="@+id/textView"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignRight="@+id/signUp"
-         android:layout_alignTop="@+id/CheckUserProfileButton"
-         android:layout_marginTop="60dp"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="61dp"
+         android:rotation="-10"
          android:text="&lt;load user profile response>" />
+
+     <Button
+         android:id="@+id/CheckUserProfileButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textView"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="48dp"
+         android:layout_marginLeft="24dp"
+         android:rotation="-10"
+         android:text="Load User Profile" />
 
 </RelativeLayout>

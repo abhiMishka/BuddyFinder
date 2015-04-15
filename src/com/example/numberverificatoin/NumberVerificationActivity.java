@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +27,11 @@ import com.parse.integratingfacebooktutorial.R;
 public class NumberVerificationActivity  extends Activity {
 	private TextView timertv = null;
 	private EditText phoneNumbTv = null;
+	EditText countryCode = null;
 	private CountDownTimer countDownTimer;
 	private RelativeLayout timerLayout;
+	private TextView verifyNumbertext;
+	LinearLayout checkNowLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +40,14 @@ public class NumberVerificationActivity  extends Activity {
 		setContentView(R.layout.number_verification_activity_main);
 		phoneNumbTv = (EditText) findViewById(R.id.ph_et);
 		timertv = (TextView) findViewById(R.id.timer_tv);
+		verifyNumbertext = (TextView) findViewById(R.id.enter_phno_tv);
 		TextView country_code_tv = (TextView) findViewById(R.id.country_code_tv);
 		country_code_tv.setText(Cognalys.getCountryCode(getApplicationContext()));
 		timerLayout = (RelativeLayout) findViewById(R.id.timer_rl);
+		countryCode = (EditText) findViewById(R.id.country_code_tv);
+		checkNowLayout = (LinearLayout) findViewById(R.id.verifyNumberLinerarLayout);
 		
-		findViewById(R.id.verifybutton).setOnClickListener(
+		findViewById(R.id.verifyNumberLinerarLayout).setOnClickListener(
 				new View.OnClickListener() {
 
 					@Override
@@ -57,6 +64,10 @@ public class NumberVerificationActivity  extends Activity {
 
 	private void verify() {
 		timerLayout.setVisibility(View.VISIBLE);
+		countryCode.setVisibility(View.INVISIBLE);
+		phoneNumbTv.setVisibility(View.INVISIBLE);
+		checkNowLayout.setVisibility(View.INVISIBLE);
+		verifyNumbertext.setText("Verifying Number");
 		countDownTimer = new CountDownTimer(60000, 1000) {
 
 			@Override
@@ -67,6 +78,9 @@ public class NumberVerificationActivity  extends Activity {
 			@Override
 			public void onFinish() {
 				timerLayout.setVisibility(View.GONE);
+				countryCode.setVisibility(View.VISIBLE);
+				phoneNumbTv.setVisibility(View.VISIBLE);
+				checkNowLayout.setVisibility(View.VISIBLE);
 			}
 
 		};
@@ -86,6 +100,7 @@ public class NumberVerificationActivity  extends Activity {
 					public void onVerificationSuccess() {
 						countDownTimer.cancel();
 						timerLayout.setVisibility(View.GONE);
+						verifyNumbertext.setText("Number verified");
 						showAlert("Your number has been verified\n\nThanks!!",true);
 						
 						

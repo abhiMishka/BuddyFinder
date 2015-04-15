@@ -60,7 +60,8 @@
         </activity>
         <activity android:name="com.parse.buddyfinder.HomePageActivity"></activity>
         <activity android:name="com.parse.buddyfinder.SettingsPage"></activity>
-         <activity android:name="com.parse.buddyfinder.FilterClass"></activity>
+        <activity android:name="com.parse.buddyfinder.FilterClass"></activity>
+        <activity android:name="com.parse.buddyfinder.AfterLoginPage"></activity>
     </application>
 
 </manifest>
