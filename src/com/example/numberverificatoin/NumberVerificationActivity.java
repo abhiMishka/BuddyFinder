@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.matesnetwork.callverification.Cognalys;
 import com.matesnetwork.interfaces.VerificationListner;
+import com.parse.buddyfinder.HomePageActivity;
 import com.parse.buddyfinder.UserDetailsActivity;
 import com.parse.integratingfacebooktutorial.R;
 
@@ -81,6 +82,7 @@ public class NumberVerificationActivity  extends Activity {
 				countryCode.setVisibility(View.VISIBLE);
 				phoneNumbTv.setVisibility(View.VISIBLE);
 				checkNowLayout.setVisibility(View.VISIBLE);
+				showHomeActivity();
 			}
 
 		};
@@ -120,8 +122,8 @@ public class NumberVerificationActivity  extends Activity {
 
 	}
 	
-	private void showUserDetailsActivity() {
-		Intent intent = new Intent(this, UserDetailsActivity.class);
+	private void showHomeActivity() {
+		Intent intent = new Intent(this, HomePageActivity.class);
 		startActivity(intent);
 	}
 	
