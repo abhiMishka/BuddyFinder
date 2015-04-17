@@ -104,7 +104,7 @@ public class NumberVerificationActivity  extends Activity {
 						timerLayout.setVisibility(View.GONE);
 						verifyNumbertext.setText("Number verified");
 						showAlert("Your number has been verified\n\nThanks!!",true);
-						
+						showHomeActivity();
 						
 					}
 

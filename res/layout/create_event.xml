@@ -64,7 +64,7 @@
              android:visibility="gone" />
 
          <Button
-             android:id="@+id/angry_btn"
+             android:id="@+id/eventCreateButton"
              android:layout_width="270dp"
              android:layout_height="60dp"
              android:background="@drawable/button_shape"

@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parse.integratingfacebooktutorial.ChatActivity;
 import com.parse.integratingfacebooktutorial.R;
 
 
@@ -35,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+				Intent intent = new Intent(MainActivity.this, ChatActivity.class);
 	    		startActivity(intent);
 			}
 		});

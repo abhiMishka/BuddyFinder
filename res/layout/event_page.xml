@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/coffee_cover" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/customborder2"
+        android:orientation="vertical"
+        android:id="@+id/eventDetailsLinearLayout" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.52"
+            android:background="#fff"
+            android:orientation="vertical" >
+            
+             <ImageView
+                android:id="@+id/calendarImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_horizontal"
+                android:background="@drawable/icon_calendar"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/EventBody"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="#000" />
+
+            <View
+                android:id="@+id/horizontalLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/calendarImage"
+                android:layout_margin="2dp"
+                android:background="@android:color/darker_gray" />
+            
+             <TextView
+            android:id="@+id/EventBody"
+            android:layout_height="wrap_content"
+            android:hint="About the event..."
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/horizontalLine"
+            android:layout_margin="5dp"
+            android:lines="5"
+            android:layout_width="fill_parent">
+            
+       		 </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/customborder2"
+        android:orientation="vertical"
+        android:id="@+id/locationLinearLayout" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.52"
+            android:background="#fff"
+            android:orientation="vertical" >
+            
+               <TextView
+                android:id="@+id/location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="#000" />
+            
+
+           
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/peopleAttendingTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/customborder2"
+        android:orientation="vertical"
+        android:id="@+id/peopleAttendingLinearLayout" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.52"
+            android:background="#fff"
+            android:orientation="vertical" >
+            
+               <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="#000" />
+            
+
+           
+        </RelativeLayout>
+
+    </LinearLayout>
+
+     <Button
+         android:id="@+id/joinButton"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:text="Join Event"
+         android:textColor="@color/white"
+         android:background="@color/green" />
+
+     <TextView
+         android:id="@+id/eventInfoOnImage"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/imageView1"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="26dp"
+         android:text="Coffee @CCD"
+         android:textColor="@color/white"
+         android:textSize="25dp"
+         android:textStyle="bold"
+         android:padding="5dp" />
+
+     <TextView
+         android:id="@+id/eventPlaceOnImage"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/eventDetailsLinearLayout"
+         android:layout_alignParentLeft="true"
+         android:text="Delhi"
+         android:textColor="@color/white"
+         android:textSize="25dp"
+         android:padding="5dp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/locationTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/eventDetailsLinearLayout"
+         android:layout_below="@+id/eventDetailsLinearLayout"
+         android:text="Location"
+         android:textColor="@color/appColor"
+         android:textSize="18sp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/peopleAttendingTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/peopleAttendingLinearLayout"
+         android:layout_below="@+id/locationLinearLayout"
+         android:text="Attending"
+         android:textColor="@color/appColor"
+         android:textSize="18sp"
+         android:textStyle="bold" />
+
+</RelativeLayout>

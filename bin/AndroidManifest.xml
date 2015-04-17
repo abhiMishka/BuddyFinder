@@ -58,10 +58,18 @@
             android:name="com.parse.integratingfacebooktutorial.HomePageActivity"
             android:label="@string/title_activity_home_page" >
         </activity>
-        <activity android:name="com.parse.buddyfinder.HomePageActivity"></activity>
-        <activity android:name="com.parse.buddyfinder.SettingsPage"></activity>
-        <activity android:name="com.parse.buddyfinder.FilterClass"></activity>
-        <activity android:name="com.parse.buddyfinder.AfterLoginPage"></activity>
+        <activity android:name="com.parse.buddyfinder.HomePageActivity" >
+        </activity>
+        <activity android:name="com.parse.buddyfinder.SettingsPage" >
+        </activity>
+        <activity android:name="com.parse.buddyfinder.FilterClass" >
+        </activity>
+        <activity android:name="com.parse.buddyfinder.AfterLoginPage" >
+        </activity>
+        <activity
+            android:name="com.parse.integratingfacebooktutorial.ChatActivity"
+            android:label="@string/title_activity_chat" >
+        </activity>
     </application>
 
 </manifest>

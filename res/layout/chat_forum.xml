@@ -1,0 +1,11 @@
+<LinearLayout android:id="@+id/list_layout"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="@drawable/chat_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListView android:id="@+id/myList" 
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"/>
+
+</LinearLayout>
