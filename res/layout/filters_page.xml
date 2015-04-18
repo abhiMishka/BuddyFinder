@@ -1,49 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:padding="50dp" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
 
-     <CheckBox
-         android:id="@+id/otherCheckbox"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/filterButton"
-         android:layout_alignLeft="@+id/outstationCheckbox"
-         android:layout_marginBottom="17dp"
-         android:text="@string/Others" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="425dp" >
 
-     <CheckBox
-         android:id="@+id/coffeCheckbox"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/outstationCheckbox"
-         android:layout_centerHorizontal="true"
-         android:text="@string/Coffee" />
+    <CheckedTextView
+        android:id="@+id/checkedTextView3"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/checkedTextView2"
+        android:text="Categories"
+        android:textColor="#f6542a"
+        android:textSize="25dp" />
+    
+    
 
-     <CheckBox
-         android:id="@+id/moviesCheckbox"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/coffeCheckbox"
-         android:layout_alignLeft="@+id/coffeCheckbox"
-         android:text="@string/Movie" />
+    <CheckBox
+        android:id="@+id/coffeCheckbox"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/checkedTextView3"
+        android:background="#c9c2c2"
+        android:text="Coffee"
+        android:textColor="#000000"
+        android:textSize="20dp" />
 
-     <CheckBox
-         android:id="@+id/outstationCheckbox"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/otherCheckbox"
-         android:layout_alignLeft="@+id/coffeCheckbox"
-         android:text="@string/Outstation" />
+    <CheckBox
+        android:id="@+id/moviesCheckbox"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/coffeCheckbox"
+        android:background="#c9c2c2"
+        android:text="Movies"
+        android:textColor="#000000"
+        android:textSize="20dp" />
 
-     <Button
-         android:id="@+id/filterButton"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_centerHorizontal="true"
-         android:layout_centerVertical="true"
-         android:text="Done" />
- 
-</RelativeLayout>
+    <CheckBox
+        android:id="@+id/outstationCheckbox"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/moviesCheckbox"
+        android:background="#c9c2c2"
+        android:text="Outstation"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/otherCheckbox"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/outstationCheckbox"
+        android:background="#c9c2c2"
+        android:text="Other"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+    
+     <AutoCompleteTextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/locationTextView"
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textAutoComplete"
+        android:hint="Location" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <CheckedTextView
+        android:id="@+id/locationTextView"
+        android:layout_width="4000dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/otherCheckbox"
+        android:layout_marginTop="14dp"
+        android:text="Location"
+        android:textColor="#f6542a"
+        android:textSize="25dp" />
+    
+    <CheckedTextView
+        android:id="@+id/visinityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/autoCompleteTextView"
+        android:layout_marginTop="8dp"
+        android:text="Viscinity"
+        android:textColor="#f6542a"
+        android:textSize="25dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_below="@+id/visinityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/okButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Done" />
+
+    </RelativeLayout>
+</ScrollView>

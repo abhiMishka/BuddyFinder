@@ -21,6 +21,7 @@ public class ChatActivity extends Activity {
 		
 		chatList = (ListView) findViewById(R.id.myList);
 		messages = new ArrayList<String>();
+		
 		messages.add("Hi");messages.add("Hello");messages.add("How you doing");messages.add("Cool");
 		messages.add("jada mat ban");messages.add("bana banaya hu mae to");messages.add("joke h ye?");
 		

@@ -4,6 +4,8 @@ package com.parse.buddyfinder;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,8 +38,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+				Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
 	    		startActivity(intent);
+				
 			}
 		});
         
